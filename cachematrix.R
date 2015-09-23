@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {
     m <<- NULL
   }
 
-  # compute inverse of matrix
+  # Compute inverse of matrix
 	get <- function() x
  	setmatrix <- function(solve) m <<- solve
  	getmatrix <- function() m
@@ -27,7 +27,7 @@ cacheSolve <- function(x, ...) {
 	return(m)
   }
 
-	# compute and return data if cache is empty
+	# Compute and return data if cache is empty
   	matrix <- x$get()
 	m <- solve(matrix, ...)
 	x$setmatrix(m)
